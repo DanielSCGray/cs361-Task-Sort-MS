@@ -13,6 +13,13 @@ Input:
 -write f"{sort_type}\n" sort_type is 1, 2 or 3 for sorting by date, priority or both  
 -the \n character is required to seperate sort type and data  
 -write json.dumps(data) where data is a list containing task dicts to be sorted  
+Example of txt file contents during a request:  
+
+1  
+[
+{“name”: “walk dog”, “Priority”: “High”, “Date”: “05-27-2025”}, 
+{“name”: “water plants”, “Priority”: “Medium”, “Date”: “05-20-2025”}
+]
 
 Output:  
 
@@ -20,6 +27,13 @@ Output:
 -open response file and read the sorted data within  
 -use json.loads(data) to convert the sorted data back to a python list of task dicts  
 -open the file again and pass to empty contents so the function will run cleanly  
+Example of txt file contents during a response:  
+
+[
+{“name”: “water plants”, “Priority”: “Medium”, “Date”: “05-20-2025”},
+{“name”: “walk dog”, “Priority”: “High”, “Date”: “05-27-2025”} 
+]
+
 
 Requirements:  
 
